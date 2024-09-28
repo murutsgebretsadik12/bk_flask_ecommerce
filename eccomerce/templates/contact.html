@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %} Cart {% endblock %}
+
+
+{% block body %}
+
+<!--start page content-->
+<div class="page-content">
+
+
+    <!--start breadcrumb-->
+    <div class="py-4 border-bottom">
+     <div class="container">
+       <nav aria-label="breadcrumb">
+         <ol class="breadcrumb mb-0"> 
+           <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+           <li class="breadcrumb-item"><a href="javascript:;">Pages</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+         </ol>
+       </nav>
+     </div>
+    </div>
+    <!--end breadcrumb-->
+ 
+ 
+    <!--start product details-->
+    <section class="section-padding">
+     <div class="container">
+ 
+       <div class="separator mb-3">
+         <div class="line"></div>
+         <h3 class="mb-0 h3 fw-bold">Find Us Map</h3>
+         <div class="line"></div>
+       </div>
+ 
+       <div class="border p-3">
+         <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.514872732565!2d-6.257533023232637!3d53.351939872290885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e88a540a4f5%3A0x1e8863501f34283d!2s89%20-%2090%20Gardiner%20Street%20Lower%2C%20Mountjoy%2C%20Dublin%2C%20D01%20KN92!5e0!3m2!1sen!2sie!4v1727522677927!5m2!1sen!2sie" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+ 
+        <div class="separator my-3">
+         <div class="line"></div>
+         <h3 class="mb-0 h3 fw-bold">Why Choose Us</h3>
+         <div class="line"></div>
+       </div>
+ 
+       <div class="row g-4">
+         <div class="col-xl-8">
+           <div class="p-4 border">
+             <form>
+               <div class="form-body">
+                 <h4 class="mb-0 fw-bold">Drop Us a Line</h4>
+                 <div class="my-3 border-bottom"></div>
+                 <div class="mb-3">
+                   <label class="form-label">Enter Your Name</label>
+                   <input type="text" class="form-control rounded-0">
+                 </div>
+                 <div class="mb-3">
+                   <label class="form-label">Enter Email</label>
+                   <input type="text" class="form-control rounded-0">
+                 </div>
+                 <div class="mb-3">
+                   <label class="form-label">Phone Number</label>
+                   <input type="text" class="form-control rounded-0">
+                 </div>
+                 <div class="mb-3">
+                   <label class="form-label">Message</label>
+                   <textarea class="form-control rounded-0" rows="4" cols="4"></textarea>
+                 </div>
+                 <div class="mb-0">
+                   <a href="thank-you.html" class="btn btn-dark btn-ecomm">Send Message</a>
+                 </div>
+               </div>
+             </form>
+           </div>
+         </div>
+         <div class="col-xl-4">
+           <div class="p-3 border">
+             <div class="address mb-3">
+               <h5 class="mb-0 fw-bold">Address</h5>
+               <p class="mb-0 font-12">89-90 Gardiner street, Dublin, Ireland</p>
+             </div>
+             <hr>
+             <div class="phone mb-3">
+               <h5 class="mb-0 fw-bold">Phone</h5>
+               <p class="mb-0 font-13">Toll Free (353) 833-018 415</p>
+               <p class="mb-0 font-13">Mobile : +01-991012131</p>
+             </div>
+             <hr>
+             <div class="email mb-3">
+               <h5 class="mb-0 fw-bold">Email</h5>
+               <p class="mb-0 font-13">murutsmenge21@gmail.com</p>
+             </div>
+             <hr>
+             <div class="working-days mb-0">
+               <h5 class="mb-0 fw-bold">Working Days</h5>
+               <p class="mb-0 font-13">Mon - FRI / 9:30 AM - 6:30 PM</p>
+             </div>
+           </div>
+         </div>
+       </div>
+ 
+     </div>
+   </section>
+    <!--start product details-->
+ 
+  </div>
+   <!--end page content-->
+
+
+{% endblock %}
