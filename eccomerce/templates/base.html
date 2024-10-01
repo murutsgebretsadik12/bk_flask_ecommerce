@@ -22,6 +22,9 @@
     <!-- dark style sheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-theme.css') }}">
 
+        <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
 
@@ -32,7 +35,8 @@
   <header class="top-header">
     <nav class="navbar navbar-expand-xl w-100 navbar-light container gap-3">
         <div class="container-fluid">
-            <a class="navbar-brand d-none d-xl-inline" href="home.html"><img src="../asset/images/logo.webp" class="logo-img" alt=""></a>
+            <a class="navbar-brand d-none d-xl-inline" href="home.html">
+            </a>
             <a class="mobile-menu-btn d-inline d-xl-none" href="javascript:;" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar">
               <i class="bi bi-list"></i>
@@ -40,7 +44,6 @@
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
                 <div class="offcanvas-header">
                   <div class="offcanvas-logo">       
-                    <img src="../static/images/logo.webp" class="logo-img" alt="">
                   </div>
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -102,7 +105,7 @@
                           <!-- end col-3 -->
                           <div class="col-12 col-xl-4 d-none d-xl-block">
                             <div class="pramotion-banner1">
-                              <img src="../asset/images/menu-img.webp" class="img-fluid" alt="" />
+                              <img src="../static/images/menu-img.webp" class="img-fluid" alt="" />
                             </div>
                           </div>
                           <!-- end col-3 -->
@@ -110,23 +113,7 @@
                         <!-- end row -->
                       </div>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
-                        Shop
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="cart.html">Shop Cart</a></li>
-                        <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
-                        <li><a class="dropdown-item" href="product-details.html">Product Details</a></li>
-                        <li><a class="dropdown-item" href="payment-method.html">Payment Method</a></li>
-                        <li><a class="dropdown-item" href="billing-details.html">Billing Details</a></li>
-                        <li><a class="dropdown-item" href="address.html">Addresses</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Shop Grid</a></li>
-                        <li><a class="dropdown-item" href="shop-grid-type-4.html">Shop Grid 4</a></li>
-                        <li><a class="dropdown-item" href="shop-grid-type-5.html">Shop Grid 5</a></li>
-                        <li><a class="dropdown-item" href="search.html">Search</a></li>
-                      </ul>
-                    </li>
+              
                     <li class="nav-item">
                       <a class="nav-link" href="/about">About</a>
                     </li>
@@ -157,15 +144,7 @@
                       </ul>
           
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
-                        Blog
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                        <li><a class="dropdown-item" href="blog-read.html">Blog Read</a></li>
-                      </ul>
-                    </li> -->
+                   
                   </ul>
                 </div>
               </div>
@@ -232,9 +211,9 @@
        <div class="row row-cols-1 row-cols-lg-4 g-4">
         <div class="col">
           <div class="footer-widget-6">
-            <img src="{{ url_for('static', filename='images/logo.webp') }}" class="logo-img mb-3" alt="">
+            <!-- <img src="{{ url_for('static', filename='images/logo.webp') }}" class="logo-img mb-3" alt=""> -->
             <h5 class="mb-3 fw-bold">About Us</h5>
-             <p class="mb-2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <p class="mb-2">At Bk Eccomerce, we believe in empowering individuals through fashion. Our diverse collections cater to every style, ensuring you feel confident and unique. Explore our journey of creativity, sustainability, and quality.</p>
 
              <a class="link-dark" href="javascript:;">Read More</a>
           </div>
@@ -296,12 +275,12 @@
           <div class="app-icon d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
             <div>
               <a href="javascript:;">
-                <img src="{{ url_for('static', filename='assets/images/play-store.webp') }}" width="160" alt="">
+                <img src="{{ url_for('static', filename='images/play-store.webp') }}" width="160" alt="">
               </a>
             </div>
             <div>
               <a href="javascript:;">
-                <img src="{{ url_for('static', filename='assets/images/apple-store.webp') }}" width="160" alt="">
+                <img src="{{ url_for('static', filename='images/apple-store.webp') }}" width="160" alt="">
               </a>
             </div>
           </div>
@@ -330,13 +309,14 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- JavaScript files -->
+   
+      <!-- JavaScript files -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='plugins/slick/slick.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+
 
 
     

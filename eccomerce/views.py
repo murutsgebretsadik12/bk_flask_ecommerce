@@ -72,3 +72,76 @@ def show_cart():
     return render_template('cart.html', cart=cart, amount=amount, total=amount+2)
 
 
+@views.route('/pluscart')
+@login_required
+def plus_cart():
+    if request.method == 'GET':
+        cart_id = request.args.get('cart_id')
+        cart_item = Cart.query.get(cart_id)
+        cart_item.quantity = cart_item.quantity + 1
+        db.session.commit()
+
+        cart = Cart.query.filter_by(customer_link=current_user.id).all()
+
+        amount = 0
+
+        for item in cart:
+            amount += item.product.current_price * item.quantity
+
+        data = {
+            'quantity': cart_item.quantity,
+            'amount': amount,
+            'total': amount + 200
+        }
+
+        return jsonify(data)
+    
+    
+@views.route('/minuscart')
+@login_required
+def minus_cart():
+    if request.method == 'GET':
+        cart_id = request.args.get('cart_id')
+        cart_item = Cart.query.get(cart_id)
+        cart_item.quantity = cart_item.quantity - 1
+        db.session.commit()
+
+        cart = Cart.query.filter_by(customer_link=current_user.id).all()
+
+        amount = 0
+
+        for item in cart:
+            amount += item.product.current_price * item.quantity
+
+        data = {
+            'quantity': cart_item.quantity,
+            'amount': amount,
+            'total': amount + 200
+        }
+
+        return jsonify(data)
+
+
+@views.route('removecart')
+@login_required
+def remove_cart():
+    if request.method == 'GET':
+        cart_id = request.args.get('cart_id')
+        cart_item = Cart.query.get(cart_id)
+        db.session.delete(cart_item)
+        db.session.commit()
+
+        cart = Cart.query.filter_by(customer_link=current_user.id).all()
+
+        amount = 0
+
+        for item in cart:
+            amount += item.product.current_price * item.quantity
+
+        data = {
+            'quantity': cart_item.quantity,
+            'amount': amount,
+            'total': amount + 200
+        }
+
+        return jsonify(data)
