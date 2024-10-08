@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bereket - eCommerce </title>
+   
 
        <!-- favicon -->
-    <link rel="icon" href="{{ url_for('static', filename='images/favicon-32x32.webp') }}" type="image/webp" />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon 32*32.webp') }}" type="image/webp" />
   
     
     <!-- Bootstrap 5 CSS -->
@@ -24,6 +24,8 @@
 
         <!-- Include jQuery from a CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Bereket - eCommerce </title>
 
 </head>
 <body>
@@ -129,10 +131,11 @@
           
           
                
-                            {% if current_user.is_authenticated %}
+                          {% if current_user.is_authenticated %}
+                          
                           <li><a class="dropdown-item" href="/profile/{{ current_user.id }}">Profile <i class="fa-solid fa-user"></i></a></li>
                           <li><a class="dropdown-item" href="#">Orders <i class="fa-solid fa-truck-fast"></i></a></li>
-                          <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                          <li><a class="dropdown-item" href="/logout">Log Out <i class="fa-solid fa-right-from-bracket"></i></a></li>
         
                           {% else %}
                           
@@ -257,11 +260,11 @@
              </div>
              <div class="mb-3 mt-3">
               <h5 class="mb-0 fw-bold">Support</h5>
-              <p class="mb-0 text-muted">support@example.com</p>
+              <p class="mb-0 text-muted">murutsmenge21@gmail.com</p>
              </div>
              <div class="">
               <h5 class="mb-0 fw-bold">Toll Free</h5>
-              <p class="mb-0 text-muted">1800- 8xx 2xx</p>
+              <p class="mb-0 text-muted">+353- 833 0184 15</p>
              </div>
           </div>
         </div>
